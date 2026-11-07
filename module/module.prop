@@ -1,7 +1,7 @@
 id=zygisk_floating_menu
 name=Zygisk Mode Menu By V3 @Hivirtus 🔥
-version=v26
-versionCode=26
+version=v26.1
+versionCode=27
 author=@Hivirtus
 description=Zygisk Mode Menu By V3 @Hivirtus 🔥
 webui=webroot

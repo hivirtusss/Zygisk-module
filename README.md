@@ -7,7 +7,7 @@ Magisk / KernelSU / SukiSU compatible **Zygisk** module with **WebUI** app picke
 | Field | Value |
 |--------|--------|
 | ID | `zygisk_floating_menu` |
-| Version | **v26** (`versionCode=26`) |
+| Version | **v26.1** (`versionCode=27`) |
 | WebUI | `webroot/index.html` |
 
 Flash the built ZIP in your root manager (Magisk, KernelSU, SukiSU, MMRL, etc.). Use **WebUI** or **Action** on the module page to open the menu.
@@ -25,7 +25,7 @@ Output: `dist/zygisk_floating_menu-v26.zip`
 In the floating **SIM settings** panel:
 
 1. Turn on **Enable SIM 1 Mocking** and enter your number (e.g. `8273202234`).
-2. Turn on **Mock mobile data (SIM 1)**.
+2. In `config.json` set `"mock_data_subscription": true` (path: `/data/media/0/http/config.json`), then save SIM settings once—or use a build that includes the in-menu data toggle when available.
 3. Tap **Save SIM Settings**.
 
 Target apps then see SIM 1 as the default **mobile data** subscription (`getDefaultDataSubscriptionId` / related APIs), aligned with the mocked number and subscription id `1`.
