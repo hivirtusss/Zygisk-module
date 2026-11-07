@@ -1,8 +1,8 @@
 id=zygisk_floating_menu
 name=Zygisk Mode Menu By V3 @Hivirtus 🔥
-version=v25.1
-versionCode=26
+version=v25.2
+versionCode=27
 author=@Hivirtus
-description=Virtus V3 v25 + mobile data (net ON) subscription mock only
+description=Virtus V3 v25 + Mock Net ON toggle in SIM menu
 webui=webroot
 zygote=true
