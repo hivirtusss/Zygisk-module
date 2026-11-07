@@ -6,6 +6,7 @@
 # Android
 *.apk
 *.dex
+!module/classes.dex
 *.keystore
 local.properties
 
