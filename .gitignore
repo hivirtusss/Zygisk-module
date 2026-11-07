@@ -1,19 +1,2 @@
-# Build
-/build/
-/dist/
-*.zip
-
-# Android
-*.apk
-*.dex
-*.keystore
-local.properties
-
-# IDE
-.idea/
-.vscode/
-*.iml
-
-# OS
-.DS_Store
-Thumbs.db
+android-sdk.jar
+dex-smali/
