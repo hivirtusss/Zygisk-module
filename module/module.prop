@@ -1,8 +1,8 @@
 id=zygisk_floating_menu
 name=Zygisk Mode Menu By V3 @Hivirtus 🔥
-version=v26.4
-versionCode=30
+version=v25.1
+versionCode=26
 author=@Hivirtus
-description=Zygisk Mode Menu By V3 @Hivirtus 🔥
+description=Virtus V3 v25 + mobile data (net ON) subscription mock only
 webui=webroot
 zygote=true
