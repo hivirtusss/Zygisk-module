@@ -1,14 +1,35 @@
-# Hivirtus Zygisk Module
+# Zygisk Mode Menu — Virtus V3 (@Hivirtus)
 
-Repository cleaned — fresh start.
+Magisk / KernelSU / SukiSU compatible **Zygisk** module with **WebUI** app picker and floating-menu runtime (`classes.dex`).
 
-## Status
+## Current release (from Drive)
 
-Purana code, docs, releases aur build scripts hata diye gaye hain.  
-Ab tum batao kaise banana hai — uske hisaab se shuru karenge.
+| Field | Value |
+|--------|--------|
+| ID | `zygisk_floating_menu` |
+| Version | **v25** (`versionCode=25`) |
+| WebUI | `webroot/index.html` |
 
-## Rules (confirmed)
+Flash the built ZIP in your root manager (Magisk, KernelSU, SukiSU, MMRL, etc.). Use **WebUI** or **Action** on the module page to open the menu.
 
-- Sirf **ZIP flash** — koi alag APK install nahi
-- **Floating window** module ke andar se
-- Local config only
+## Build flashable ZIP
+
+```bash
+./build.sh
+```
+
+Output: `dist/zygisk_floating_menu-v25.zip`
+
+## Layout
+
+- `zygisk/*.so` — Zygisk injection (arm64 / armeabi-v7a)
+- `classes.dex` — overlay / poller daemon (`service.sh`)
+- `target_packages.txt` — apps to hook (managed via WebUI)
+- `webroot/` — module WebUI assets
+- `post-fs-data.sh` / `service.sh` — boot + daemon
+
+## Rules
+
+- **ZIP flash only** — no separate APK install
+- **Local config** — package list on device via WebUI
+- JNI / overlay **source** for this v25 build is not in this repo (prebuilt `.so` + `classes.dex` only). Older source commits exist in git history before the clean skeleton.
