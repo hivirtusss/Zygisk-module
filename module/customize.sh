@@ -2,7 +2,7 @@
 TARGET="$MODPATH/target_packages.txt"
 mkdir -p "$MODPATH/webroot"
 if [ ! -f "$TARGET" ]; then
-  : > "$TARGET"
+  printf '%s\n' 'none' > "$TARGET"
 else
   grep -v '^\*$' "$TARGET" 2>/dev/null | grep -v '^\s*$' > "$TARGET.tmp" || : > "$TARGET.tmp"
   mv "$TARGET.tmp" "$TARGET"
