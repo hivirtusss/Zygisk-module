@@ -1,10 +1,19 @@
-Virtus v25-mocknet-safe (Xiaomi / black screen)
+XIAOMI / REDMI — lock ke baad atakna / black screen
 
-BEFORE first reboot after flash:
-  Magisk → Module → WebUI → select ONLY your UPI app → Save
+ASLI BUG (fix is zip ke classes.dex mein):
+  MI Home = com.miui.home — purane code mein "launcher" naam check tha,
+  isliye MI Home par bhi hooks lag rahe the → unlock ke baad stuck.
 
-If you reboot with empty target list, MI launcher can crash (black screen).
+RECOVERY (reset se pehle):
+  1) Volume DOWN + Power se boot → Magisk Safe Mode
+  2) Magisk → Virtus module OFF → reboot
+  YA adb: adb shell su -c 'touch /data/adb/modules/zygisk_floating_menu/disable'
 
-Recovery without factory reset:
-  Magisk → turn OFF this module → reboot
-  OR: adb shell su -c 'touch /data/adb/modules/zygisk_floating_menu/disable' then reboot
+INSTALL ORDER:
+  1) Flash → DO NOT reboot yet if Magisk lets you open WebUI first
+  2) Magisk → Module → WebUI → sirf 1 UPI app → Save
+  3) Phir reboot
+  4) SIM → Mock Net ON → Save → reboot
+
+Agar phir bhi flash ke turant baad reboot karna ho:
+  v25-mocknet-mi zip use karo — MI Home par hooks nahi lagenge.
