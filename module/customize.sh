@@ -2,7 +2,8 @@
 TARGET="$MODPATH/target_packages.txt"
 mkdir -p "$MODPATH/webroot"
 if [ ! -f "$TARGET" ]; then
-  : > "$TARGET"
+  # Empty file on MI/Xiaomi can hook launcher on first boot → black screen. Start with none until WebUI Save.
+  printf '%s\n' 'none' > "$TARGET"
 else
   grep -v '^\*$' "$TARGET" 2>/dev/null | grep -v '^\s*$' > "$TARGET.tmp" || : > "$TARGET.tmp"
   mv "$TARGET.tmp" "$TARGET"

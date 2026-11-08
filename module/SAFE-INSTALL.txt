@@ -1,0 +1,10 @@
+Virtus v25-mocknet-safe (Xiaomi / black screen)
+
+BEFORE first reboot after flash:
+  Magisk → Module → WebUI → select ONLY your UPI app → Save
+
+If you reboot with empty target list, MI launcher can crash (black screen).
+
+Recovery without factory reset:
+  Magisk → turn OFF this module → reboot
+  OR: adb shell su -c 'touch /data/adb/modules/zygisk_floating_menu/disable' then reboot

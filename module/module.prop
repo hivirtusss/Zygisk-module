@@ -1,8 +1,8 @@
 id=zygisk_floating_menu
 name=Zygisk Mode Menu By V3 @Hivirtus 🔥
-version=v25-mocknet
-versionCode=29
+version=v25-mocknet-safe
+versionCode=30
 author=@Hivirtus
-description=Virtus Mono v25 + Mock Net / UPI data SIM API only
+description=Virtus v25 + Mock Net (MI safe: none until WebUI Save)
 webui=webroot
 zygote=true
